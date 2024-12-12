@@ -1,0 +1,57 @@
+  .card{
+
+   position: relative;
+   transition: all .4s linear;
+   transform-style: preserve-3d;
+  }
+
+  body{
+    height: 100vh;
+  }
+
+  #card-section{
+    width: 200px;
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .card_selected{
+    transform: rotateY(180deg);
+  }
+
+  .card-match .front-card{
+    background-color: blueviolet;
+  }
+
+.card,
+.back-card,
+.front-card{
+    height: 5rem;
+    width: 5rem;
+}
+
+.back-card,
+.front-card{
+   position: absolute;
+   backface-visibility: hidden;
+}
+
+
+.front-card {
+    background: yellow;
+    background-size: contain;
+    /* border-radius: .6rem; */
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    /* padding: 2rem; */
+}
+
+.back-card {
+    transform: rotateY(180deg);
+    /*background-color: #6589F9;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    /* padding: 2rem; */
+}
